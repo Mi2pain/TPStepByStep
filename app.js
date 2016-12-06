@@ -1,4 +1,3 @@
-// app.js
 console.log("It Works !");
 
 var express = require("express");
@@ -14,6 +13,14 @@ var app = express();
 
 var server = http.createServer(app);
 
+
+app.get("/loadPres", function(request, response) {
+response.send("It works !");
+});
+
+app.get("/savePres", function(request, response) {
+response.send("It works !");
+});
 
 // init server
 
