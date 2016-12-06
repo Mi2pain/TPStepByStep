@@ -14,8 +14,18 @@ var app = express();
 var server = http.createServer(app);
 
 
-app.get("/loadPres", function(request, response) {
-response.send("It works !");
+app.get("/loadPres", function (request, response) {
+    fs = require('fs');
+    fs.readdir(CONFIG.presentationDirectory, (err, files) => {
+        files.forEach(file => {
+            fs.readFile(file, 'utf8', function (err, data) {
+                if (err) {
+                    return console.log(err);
+                }
+                console.log(data);
+            });
+        });   
+    
 });
 
 app.get("/savePres", function(request, response) {
