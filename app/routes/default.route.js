@@ -1,8 +1,8 @@
 var express = require("express");
 var router = express.Router();
+module.exports = router;
 
-router.get("/", function(request, response) {
+router.route("/").get(function(request, response) {
 response.send("It works !");
 });
 
-module.exports = router;
