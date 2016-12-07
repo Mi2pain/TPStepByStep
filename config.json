@@ -1,5 +1,5 @@
 {
-"port": 1338,
-"contentDirectory" : "./uploads",
-"presentationDirectory" : "./presentation_content"
+	"port": 1337,
+	"contentDirectory" : "./uploads",
+	"presentationDirectory" : "./presentation_content"
 }
